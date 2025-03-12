@@ -2,23 +2,26 @@ const refs = {
   form: document.querySelector('.feedback-form'),
 };
 
-let formData = { email: '', message: '' };
+let formData = {
+  email: '',
+  message: '',
+};
 const LOCAL_STORAGE_KEY = 'feedback-form-state';
 
-const loadPage = () => {
-  const storageInfo = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+const onInputData = () => {
+  const storageData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 
-  if (!storageInfo) {
+  if (!storageData) {
     return;
   }
 
-  formData = storageInfo;
+  formData = storageData;
 
   refs.form.elements.email.value = formData.email;
   refs.form.elements.message.value = formData.message;
 };
 
-loadPage();
+onInputData();
 
 refs.form.addEventListener('input', e => {
   const keys = Object.keys(formData);
