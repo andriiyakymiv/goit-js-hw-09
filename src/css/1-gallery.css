@@ -1,0 +1,45 @@
+@import 'simplelightbox/dist/simple-lightbox.min.css';
+
+/* Common */
+
+body {
+    background-color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Gallery */
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 24px;
+    margin: 24px auto;
+    max-width: 1128px;
+}
+
+.gallery-item {
+    width: 360px;
+    height: 200px;
+    flex-basis: calc((1128px - 24px * 2) / 3);
+    transition: transform 550ms ease-in-out;
+    cursor: pointer;
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+    transform: scale(1.100);
+}
