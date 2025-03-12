@@ -1,0 +1,32 @@
+/* Common */
+
+body {
+    background-color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.page__list-link {
+    padding: 16px 40px;
+    margin: 5px;
+    border: solid black 2px;
+    color: black;
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.page__list-link:hover {
+    background-color: black;
+    color: white;
+}
