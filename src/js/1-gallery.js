@@ -18,3 +18,8 @@ const createGallery = images.map(
 );
 
 gallery.innerHTML = createGallery.join('');
+
+let simpleLightBoxGallery = new SimpleLightbox('.gallery-link', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
